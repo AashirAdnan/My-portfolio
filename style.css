@@ -94,7 +94,7 @@ span {
 
 section {
   min-height: 100vh;
-  padding: 7% 15%;
+  padding: 7rem 15%;
 }
 
 #home {
@@ -304,4 +304,181 @@ form input{
 
 form input:focus{
     background-color: rbg(229,229,229);
+}
+
+/* Footer Section */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10rem;
+    bottom: 0;
+    background-color: var(--primary-background-color);
+    width: 100%;
+    padding: 5rem 15%;
+}
+
+.col-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.col-box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.col-box i{
+    font-size: 2rem;
+
+}
+
+.col-box span{
+    font-size: 1.2rem;
+}
+
+.col-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+    max-width: 500px;
+}
+
+.col-right span{
+    font-size: 1.3rem;
+
+}
+
+.col-right .social-icons{
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+    gap: 1rem;
+
+}
+
+.col-right .social-icons i{
+font-size: 2rem;
+transition: 0.3s ease-in-out;
+cursor: pointer;
+}
+
+.social-icons i:hover{
+    color: white;
+}
+
+/* Responsiveness */
+
+@media(max-width:968px){    
+section{
+    padding: 5rem 15%;
+}
+
+nav .btn{
+    display: none;
+}
+#menu{
+    display: block;
+}
+
+.links{
+    position: absolute;
+    top:100%;
+    right: 0%;
+    width: 100%;
+    padding: 1em 3em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+}
+
+.links a{
+    margin: 2rem;
+    display: block;
+    font-size:1.5rem ;
+    color: white;
+}
+
+.links .active{
+    display: block;
+}
+
+#home h1{
+    font-size: 2.3rem;
+}
+
+#home h3{
+    font-size: 1.2rem;
+}
+
+#home img{
+    width: 24vw;
+}
+
+#about{
+    flex-direction: column;
+}
+
+#about img{
+    width: 32vw;
+
+}
+
+#about h1{
+    font-size: 2.3rem;
+}
+
+#about ul{
+    font-size: 0.9rem;
+}
+
+}
+@media(max-width:768px){    
+#home h1{
+    font-size: 1.6rem;
+}
+
+#home h3{
+    font-size: 1rem;
+}
+
+#home img{
+    width: 32vw;
+}
+
+#home p{
+    font-size: 0.8rem;
+}
+
+
+#about .skills{
+    gap: 3rem;
+}
+
+#services .header{
+    font-size: 2.5rem;
+}
+
+#contact .header{
+    font-size: 2.5rem;
+}
+
+#contact .input-box span{
+    font-size: 0.9rem;
+}
+
+.input-box input{
+    padding: 0.5rem 1rem;
+}
+
+
+
 }
