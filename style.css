@@ -16,6 +16,7 @@
 body {
   min-height: 100vh;
   background-color: var(--primary-background-color);
+    overflow-x: hidden; 
 }
 
 /* Navigation */
@@ -308,11 +309,11 @@ form input:focus{
 
 /* Footer Section */
 
-footer{
+  footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:10rem;
+    gap:4rem;
     bottom: 0;
     background-color: var(--primary-background-color);
     width: 100%;
@@ -370,11 +371,17 @@ cursor: pointer;
 
 .social-icons i:hover{
     color: white;
-}
+}  
 
 /* Responsiveness */
 
 @media(max-width:968px){    
+
+    nav, section, footer {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
 section{
     padding: 5rem 15%;
 }
@@ -439,6 +446,12 @@ nav .btn{
 #about ul{
     font-size: 0.9rem;
 }
+
+footer{
+    flex-direction: column;
+    align-items: baseline;
+}
+
 
 }
 @media(max-width:768px){    
