@@ -1,0 +1,289 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins';
+}
+
+
+:root{
+    --primary-background-color: rgb(24,24,24);
+    --secondary-background-color: rgb(21,21,21);
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: var(--primary-background-color);
+}
+
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(15, 15, 15,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul a{
+    color: white;
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+
+}
+
+nav ul a:hover{
+    opacity: 1;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+
+.logo:hover{
+    opacity: 1;
+}
+
+.btn{
+    padding: 0.4rem 1rem;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+
+.btn:hover{
+    background-color: white;
+    color: black;
+
+}
+
+span{
+    background: linear-gradient(to right, #6cff52, #3ec5ff );
+    background-clip: text;
+    color: transparent;
+}
+
+#menu{
+    color: white;
+    font-size: 3rem;
+    display: none;
+}
+
+
+/* Home section */
+
+
+section{
+    min-height: 100vh;
+    padding: 7% 15%;
+}
+
+#home{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: white;
+
+}
+
+#home img{
+width: 15vw;
+border-radius:50% ;
+margin-bottom: -3%;
+}
+
+.info-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    max-width: 600px;
+}
+
+.info-box h1{
+    font-size: 4rem ;
+    font-weight: 500;
+    margin-bottom: -3%;
+}
+
+
+.info-box h3{
+    font-size: 2rem;
+    font-weight: 400;
+    
+}
+
+.info-box p{
+    opacity: 0.7;
+    margin-bottom: -3%;
+}
+
+.btn-box{
+    display: flex;
+    gap: 1rem;
+    color: var(--primary-background-color);
+}
+
+.btn-box .btn:nth-of-type(2){
+    background-color: white;
+    color: var(--primary-background-color);
+}
+
+.btn-box .btn:nth-of-type(2):hover{
+    background-color: var(--primary-background-color);
+    color: white;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--primary-background-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #6cff52, #3ec5ff);
+}
+
+
+/* About Section */
+
+
+#about{
+    background-color: var(--secondary-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rrem;
+}
+
+#about img{
+    width: 30vw;
+    border-radius: 1rem;
+
+}
+
+
+.about-box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 2rem;
+}
+
+
+.about-box h1{
+    font-size: 3rem;
+}
+
+.about-box p{
+    font-size: 0.9rem;
+    color: white;
+    opacity: 0.8;
+}
+
+.skills{
+    display: flex;
+    align-items: left;
+    gap: 8rem;
+}
+
+.skills ul{
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    color: white;
+    opacity: 0.8;
+    align-items: baseline;
+}
+
+
+.skills ul li{
+    display: flex;
+    font-size: 0.9rem;
+    transition: 0.3s ease-in-out;
+}
+
+
+.skills ul li:hover{
+    transform: translateX(10px);
+}
+
+.about-box h2{
+    font-size: 1.5rem;
+}
+
+
+/* Services Section */
+
+
+#services{
+    background-color: var(--primary-background-color);
+}
+.header{
+    text-align: center;
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.box h1 span{
+    font-size: 2rem;
+}
+
+.box p{
+    opacity: 0.8;
+}
+.box{
+    border: 3px solid rgb(49,49,49);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    object-fit: cover;
+    padding:3rem;
+    gap: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+}
+
+.box:hover{
+    border: 3px solid rgb(100,100,100);
+}
