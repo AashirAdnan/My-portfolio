@@ -126,21 +126,20 @@ Right now I’m looking for freelance projects or junior roles where I can keep 
     </section>
 
     <!-- Contact section -->
-
-    <!-- Contact section -->
 <section id="contact">
   <h1 class="header"><span>Contact</span></h1>
 
   <form 
-  name="contact" 
-  id="contactForm" 
-  method="POST" 
-  netlify 
-  data-netlify-honeypot="bot-field"
->
-  <!-- These two lines are REQUIRED for Netlify -->
-  <input type="hidden" name="form-name" value="contact" />
-  <p hidden><input name="bot-field" /></p>
+    name="contact" 
+    id="contactForm" 
+    method="POST" 
+    netlify
+    data-netlify-honeypot="bot-field"
+  >
+    <input type="hidden" name="form-name" value="contact" />
+    <p hidden>
+      <label>Don't fill this out: <input name="bot-field" /></label>
+    </p>
 
     <div class="input-box">
       <span>Full Name</span>
@@ -160,8 +159,7 @@ Right now I’m looking for freelance projects or junior roles where I can keep 
       </div>
     </div>
 
-    <!-- Success/Error Message -->
-    <div id="form-status"></div>
+    <div id="form-status" style="text-align: center; margin: 1rem 0; color: white;"></div>
 
     <button type="submit" class="contact-btn">Submit</button>
   </form>
