@@ -369,6 +369,15 @@ transition: 0.3s ease-in-out;
 cursor: pointer;
 }
 
+.social-icons span a,
+.social-icons span a:link,
+.social-icons span a:visited,
+.social-icons span a:hover,
+.social-icons span a:active{
+    color: inherit;
+    text-decoration: none;
+}
+
 .social-icons i:hover{
     color: white;
 }  
