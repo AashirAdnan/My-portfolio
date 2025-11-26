@@ -6,7 +6,7 @@ menu.onclick = () => {
   nav.classList.toggle("active");
 };
 
-// Expanding message field (unchanged)
+
 document.getElementById("message-input").addEventListener("focus", function () {
   document.querySelector(".message-box").classList.add("active");
   setTimeout(() => document.getElementById("message-textarea").focus(), 350);
@@ -20,43 +20,29 @@ document
     }
   });
 
-// ========= NETLIFY FORM HANDLING (AJAX) =========
+
 const form = document.getElementById("contactForm");
 const statusDiv = document.getElementById("form-status");
 
-form.addEventListener("submit", async function (e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // Copy message from textarea to hidden input for Netlify
-  const messageTextarea = document.getElementById("message-textarea");
-  const hiddenMessage = document.createElement("input");
-  hiddenMessage.type = "hidden";
-  hiddenMessage.name = "message";
-  hiddenMessage.value = messageTextarea.value;
-  form.appendChild(hiddenMessage);
-
   const formData = new FormData(form);
+  const encoded = new URLSearchParams(formData).toString();
 
-  try {
-    const response = await fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    });
-
-    if (response.ok) {
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encoded,
+  })
+    .then(() => {
       statusDiv.innerHTML =
-        "<p style='color:#4ade80; font-weight:600;'>Message sent successfully! I'll reply soon.</p>";
+        "<p style='color:#4ade80; font-weight:600; text-align:center;'>Message sent successfully! I'll reply soon.</p>";
       form.reset();
       document.querySelector(".message-box").classList.remove("active");
-    } else {
-      throw new Error("Submission failed");
-    }
-  } catch (error) {
-    statusDiv.innerHTML =
-      "<p style='color:#ff6b6b;'>Oops! Something went wrong. Try again.</p>";
-  }
-
-  // Remove the temporary hidden input
-  form.removeChild(hiddenMessage);
+    })
+    .catch(() => {
+      statusDiv.innerHTML =
+        "<p style='color:#ff6b6b; text-align:center;'>Oops! Something went wrong. Try again.</p>";
+    });
 });
