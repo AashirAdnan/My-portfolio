@@ -24,7 +24,6 @@ const statusDiv = document.getElementById("form-status");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log("Form submitted!"); // ← you WILL see this now
 
   const message = document.getElementById("message-textarea").value.trim();
   if (!message) {
