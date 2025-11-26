@@ -15,14 +15,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({publicKey: "rUb4bUThmq2qGzaEG"});
-   })();
-</script>
     <title>Aashir</title>
 
   </head>
@@ -138,7 +130,7 @@ Right now I’m looking for freelance projects or junior roles where I can keep 
     <section id="contact">
   <h1 class="header"><span>Contact</span></h1>
 
-  <form id="contactForm">
+  <form id="contactForm" action="POST" data-netlify="true">
     <div class="input-box">
       <span>Full Name</span>
       <input type="text" name="name" id="name" placeholder="Enter Your Full Name" required>
@@ -156,6 +148,10 @@ Right now I’m looking for freelance projects or junior roles where I can keep 
         <textarea name="message" id="message-textarea" placeholder="Enter Your Message" rows="5" required></textarea>
     </div>
 </div>
+
+<!-- These two lines stop redirect & remove captcha -->
+    <input type="hidden" name="_next" value="https://yourusername.github.io/your-repo-name/">
+    <input type="hidden" name="_captcha" value="false">
 
     <button type="submit" class="contact-btn">Submit</button>
   </form>
