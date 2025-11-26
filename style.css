@@ -80,7 +80,7 @@ nav ul a:hover {
 }
 
 span {
-  background: linear-gradient(to right, #6cff52, #3ec5ff);
+  background: linear-gradient(to right, #ff52a9, #3e41ff);
   background-clip: text;
   color: transparent;
 }
@@ -143,12 +143,12 @@ section {
   color: var(--primary-background-color);
 }
 
-.btn-box .btn:nth-of-type(2) {
+.btn-box a:nth-of-type(2) {
   background-color: white;
   color: var(--primary-background-color);
 }
 
-.btn-box .btn:nth-of-type(2):hover {
+.btn-box a:nth-of-type(2):hover {
   background-color: var(--primary-background-color);
   color: white;
 }
@@ -159,7 +159,7 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #6cff52, #3ec5ff);
+  background: linear-gradient(to bottom, #ff52a9, #3e41ff);
 }
 
 /* About Section */
@@ -414,7 +414,7 @@ nav .btn{
     color: white;
 }
 
-.links .active{
+.links.active{
     display: block;
 }
 
@@ -433,9 +433,28 @@ nav .btn{
 #about{
     flex-direction: column;
 }
+.about-info h1 span{
+    display:flex;
+    justify-content: center;
+}
+
+.about-info p{
+    text-align: center;
+}
+
+section h2 span{
+    display: flex;
+    justify-content: center;
+}
+
+.skills{
+    justify-content: center;
+    
+    
+}
 
 #about img{
-    width: 32vw;
+    display: none;
 
 }
 
