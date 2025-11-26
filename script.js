@@ -23,36 +23,22 @@ const form = document.getElementById("contactForm");
 const statusDiv = document.getElementById("form-status");
 
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
   const message = document.getElementById("message-textarea").value.trim();
   if (!message) {
+    e.preventDefault();
     statusDiv.innerHTML =
       "<p style='color:#ff6b6b;'>Please write a message 😅</p>";
     return;
   }
 
-  const formData = new FormData(form);
-  formData.set("message", message);
-
   statusDiv.innerHTML = "<p style='color:#4ade80;'>Sending...</p>";
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => {
-      statusDiv.innerHTML =
-        "<p style='color:#4ade80; font-weight:600;'>Message sent successfully! 🚀</p>";
-      form.reset();
-      document.querySelector(".message-box").classList.remove("active");
-      setTimeout(() => {
-        statusDiv.innerHTML = "";
-      }, 3000);
-    })
-    .catch(() => {
-      statusDiv.innerHTML =
-        "<p style='color:#ff6b6b;'>Error — email me directly: m.aashiradnan@gmail.com</p>";
-    });
+  document.querySelector(".message-box").classList.remove("active");
+  setTimeout(() => {
+    statusDiv.innerHTML =
+      "<p style='color:#4ade80; font-weight:600;'>Message sent successfully! 🚀</p>";
+    form.reset();
+    setTimeout(() => {
+      statusDiv.innerHTML = "";
+    }, 3000);
+  }, 1000);
 });
