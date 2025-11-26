@@ -136,28 +136,30 @@ Right now I’m looking for freelance projects or junior roles where I can keep 
     <!-- Contact section -->
 
     <section id="contact">
-      <h1 class="header"><span>Contact</span></h1>
+  <h1 class="header"><span>Contact</span></h1>
 
-      <form action="#">
-        <div class="input-box">
-            <span>Full Name</span>
-            <input type="text" id="name" placeholder="Enter Your Full Name" required>
-        </div>
+  <form id="contactForm">
+    <div class="input-box">
+      <span>Full Name</span>
+      <input type="text" name="name" id="name" placeholder="Enter Your Full Name" required>
+    </div>
 
-        <div class="input-box">
-            <span>Email</span>
-            <input type="email" id="email" placeholder="Enter Your Email" required>
-        </div>
+    <div class="input-box">
+      <span>Email</span>
+      <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+    </div>
 
-        <div class="input-box">
-            <span>Your Message</span>
-            <input type="text" id="message" placeholder="Enter Your Message" required>
+    <div class="input-box message-box">
+    <span>Your Message</span>
+    <div class="message-wrapper">
+        <input type="text" name="message" id="message-input" placeholder="Enter Your Message" required>
+        <textarea name="message" id="message-textarea" placeholder="Enter Your Message" rows="5" required></textarea>
+    </div>
+</div>
 
-        </div>
-
-            <button class="contact-btn" onclick ="sendMail()" >Submit</button>
-      </form>
-    </section>
+    <button type="submit" class="contact-btn">Submit</button>
+  </form>
+</section>
 
 
     <!-- Footer Section -->

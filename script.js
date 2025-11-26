@@ -9,12 +9,43 @@ menu.onclick = () => {
 // Contact form code *NOT MINE
 
 
-function sendMail(){
-    let parms = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("messsage").value,
-    }
+(function () {
+  emailjs.init("rUb4bUThmq2qGzaEG"); // ← Replace with your real Public Key
+})();
 
-    emailjs.send("service_upi7qum", "template_bf1264h", parms).then(alert("Email Sent!"));
-}
+window.onload = function () {
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      this.querySelector(".contact-btn").textContent = "Sending...";
+
+      emailjs
+        .sendForm("service_upi7qum", "template_bf1264h", this)
+        .then(() => {
+          alert("Message sent! I'll reply soon");
+          this.reset();
+          this.querySelector(".contact-btn").textContent = "Submit";
+        })
+        .catch(() => {
+          alert("Failed. Try again or email me directly");
+          this.querySelector(".contact-btn").textContent = "Submit";
+        });
+    });
+};
+
+
+
+document.getElementById("message-input").addEventListener("focus", function () {
+  document.querySelector(".message-box").classList.add("active");
+  setTimeout(() => document.getElementById("message-textarea").focus(), 350);
+});
+
+document
+  .getElementById("message-textarea")
+  .addEventListener("blur", function () {
+    if (this.value.trim() === "") {
+      document.querySelector(".message-box").classList.remove("active");
+    }
+  });

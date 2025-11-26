@@ -271,58 +271,114 @@ section {
 /* Contact Section */
 
 
-#contact{
-    background-color: var(--secondary-background-color);
+#contact {
+  background-color: var(--secondary-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 15%;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 500px;
 }
 
-form .input-box{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    gap: 1em;
-
+.input-box {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
- .contact-btn{
-    padding: 0.4rem 1rem;
+.input-box span {
+  font-size: 1.2rem;
   color: white;
-    background-color: var(--primary-background-color);
-  font-weight: 500;
-  letter-spacing: 1px;
+}
+
+/* Normal inputs (Name & Email) */
+form input[type="text"],
+form input[type="email"] {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
   border-radius: 0.5rem;
+  border: none;
+  outline: none;
   font-size: 1.1rem;
+  background: white;
+}
+
+/* Message Box – Expand on Click */
+.message-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+#message-input,
+#message-textarea {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  background: white;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+}
+
+#message-input {
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 2;
+}
+
+#message-textarea {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  resize: none;
+  position: relative;
+  z-index: 1;
+}
+
+.message-box.active #message-input {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.message-box.active #message-textarea {
+  height: 150px;
+  padding: 0.9rem 1.2rem;
+  opacity: 1;
+}
+
+/* Submit Button */
+.contact-btn {
+  padding: 0.8rem 3rem;
+  background-color: var(--primary-background-color);
+  color: white;
   border: 2px solid white;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
+  margin-top: 1rem;
 }
-
-.contact-btn:hover{
-    background-color: white;
-    color: black;
-}
-
-.input-box span{
-    font-size: 1.2rem;
-}
-
-form input{
-    font-size: 1.3rem;
-    padding: 0.6rem 5rem;
-    border-radius: 0.5rem;
-    border: none;
-    outline: none;
-}
-
-form input:focus{
-    background-color: rbg(229,229,229);
+.contact-btn:hover {
+  background-color: white;
+  color: black;
 }
 
 /* Footer Section */
