@@ -132,15 +132,15 @@ Right now I’m looking for freelance projects or junior roles where I can keep 
   <h1 class="header"><span>Contact</span></h1>
 
   <form 
-    name="contact" 
-    id="contactForm" 
-    method="POST" 
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
-  >
-    <!-- Required hidden fields for Netlify -->
-    <input type="hidden" name="form-name" value="contact" />
-    <p hidden><input name="bot-field" /></p>
+  name="contact" 
+  id="contactForm" 
+  method="POST" 
+  netlify 
+  data-netlify-honeypot="bot-field"
+>
+  <!-- These two lines are REQUIRED for Netlify -->
+  <input type="hidden" name="form-name" value="contact" />
+  <p hidden><input name="bot-field" /></p>
 
     <div class="input-box">
       <span>Full Name</span>
