@@ -130,39 +130,36 @@ Right now I’m looking for freelance projects or junior roles where I can keep 
   <h1 class="header"><span>Contact</span></h1>
 
   <form 
-    name="contact" 
-    id="contactForm" 
-    method="POST" 
-    netlify
-    data-netlify-honeypot="bot-field"
-  >
-    <input type="hidden" name="form-name" value="contact" />
-    <p hidden>
-      <label>Don't fill this out: <input name="bot-field" /></label>
-    </p>
+  name="contact" 
+  id="contactForm" 
+  method="POST" 
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <p hidden>
+    <label>Don't fill this out: <input name="bot-field" /></label>
+  </p>
 
-    <div class="input-box">
-      <span>Full Name</span>
-      <input type="text" name="name" id="name" placeholder="Enter Your Full Name" required>
-    </div>
+  <div class="input-box">
+    <span>Full Name</span>
+    <input type="text" name="name" placeholder="Enter Your Full Name" required>
+  </div>
 
-    <div class="input-box">
-      <span>Email</span>
-      <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
-    </div>
+  <div class="input-box">
+    <span>Email</span>
+    <input type="email" name="email" placeholder="Enter Your Email" required>
+  </div>
 
-    <div class="input-box message-box">
-      <span>Your Message</span>
-      <div class="message-wrapper">
-        <input type="text" name="message-placeholder" id="message-input" placeholder="Enter Your Message" required>
-        <textarea name="message" id="message-textarea" placeholder="Enter Your Message" rows="5"></textarea>
-      </div>
-    </div>
+  <div class="input-box message-box">
+    <span>Your Message</span>
+    <textarea name="message" placeholder="Enter Your Message" rows="5" required></textarea>
+  </div>
 
-    <div id="form-status" style="text-align: center; margin: 1rem 0; color: white;"></div>
+  <div id="form-status" style="text-align: center; margin: 1rem 0; color: white;"></div>
 
-    <button type="submit" class="contact-btn">Submit</button>
-  </form>
+  <button type="submit" class="contact-btn">Submit</button>
+</form>
 </section>
 
 

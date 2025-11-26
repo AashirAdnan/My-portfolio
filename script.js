@@ -6,7 +6,7 @@ menu.onclick = () => {
   nav.classList.toggle("active");
 };
 
-// Expanding message field (your original code)
+
 document.getElementById("message-input").addEventListener("focus", function () {
   document.querySelector(".message-box").classList.add("active");
   setTimeout(() => document.getElementById("message-textarea").focus(), 350);
