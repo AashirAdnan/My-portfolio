@@ -127,10 +127,21 @@ Right now I’m looking for freelance projects or junior roles where I can keep 
 
     <!-- Contact section -->
 
-    <section id="contact">
+    <!-- Contact section -->
+<section id="contact">
   <h1 class="header"><span>Contact</span></h1>
 
-  <form id="contactForm" action="POST" data-netlify="true">
+  <form 
+    name="contact" 
+    id="contactForm" 
+    method="POST" 
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+  >
+    <!-- Required hidden fields for Netlify -->
+    <input type="hidden" name="form-name" value="contact" />
+    <p hidden><input name="bot-field" /></p>
+
     <div class="input-box">
       <span>Full Name</span>
       <input type="text" name="name" id="name" placeholder="Enter Your Full Name" required>
@@ -142,16 +153,15 @@ Right now I’m looking for freelance projects or junior roles where I can keep 
     </div>
 
     <div class="input-box message-box">
-    <span>Your Message</span>
-    <div class="message-wrapper">
-        <input type="text" name="message" id="message-input" placeholder="Enter Your Message" required>
-        <textarea name="message" id="message-textarea" placeholder="Enter Your Message" rows="5" required></textarea>
+      <span>Your Message</span>
+      <div class="message-wrapper">
+        <input type="text" name="message-placeholder" id="message-input" placeholder="Enter Your Message" required>
+        <textarea name="message" id="message-textarea" placeholder="Enter Your Message" rows="5"></textarea>
+      </div>
     </div>
-</div>
 
-<!-- These two lines stop redirect & remove captcha -->
-    <input type="hidden" name="_next" value="https://yourusername.github.io/your-repo-name/">
-    <input type="hidden" name="_captcha" value="false">
+    <!-- Success/Error Message -->
+    <div id="form-status"></div>
 
     <button type="submit" class="contact-btn">Submit</button>
   </form>
