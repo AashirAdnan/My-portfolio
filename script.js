@@ -6,7 +6,6 @@ menu.onclick = () => {
   nav.classList.toggle("active");
 };
 
-
 document.getElementById("message-input").addEventListener("focus", function () {
   document.querySelector(".message-box").classList.add("active");
   setTimeout(() => document.getElementById("message-textarea").focus(), 350);
@@ -20,19 +19,17 @@ document
     }
   });
 
-// Netlify form handler (the magic part)
 const form = document.getElementById("contactForm");
 const statusDiv = document.getElementById("form-status");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log("Form submitted!"); // Debug line — check console
+  console.log("Form submitted!"); // ← you WILL see this now
 
-  const textarea = document.getElementById("message-textarea");
-  const message = textarea.value.trim();
+  const message = document.getElementById("message-textarea").value.trim();
   if (!message) {
     statusDiv.innerHTML =
-      "<p style='color:#ff6b6b;'>Please enter a message.</p>";
+      "<p style='color:#ff6b6b;'>Please write a message 😅</p>";
     return;
   }
 
@@ -46,19 +43,17 @@ form.addEventListener("submit", function (e) {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then((response) => {
-      if (response.ok) {
-        statusDiv.innerHTML =
-          "<p style='color:#4ade80; font-weight:600;'>Message sent! I'll reply soon.</p>";
-        form.reset();
-        document.querySelector(".message-box").classList.remove("active");
-      } else {
-        throw new Error("Failed");
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error); // Debug line
+    .then(() => {
       statusDiv.innerHTML =
-        "<p style='color:#ff6b6b;'>Error! Try emailing me directly.</p>";
+        "<p style='color:#4ade80; font-weight:600;'>Message sent successfully! 🚀</p>";
+      form.reset();
+      document.querySelector(".message-box").classList.remove("active");
+      setTimeout(() => {
+        statusDiv.innerHTML = "";
+      }, 3000);
+    })
+    .catch(() => {
+      statusDiv.innerHTML =
+        "<p style='color:#ff6b6b;'>Error — email me directly: m.aashiradnan@gmail.com</p>";
     });
 });

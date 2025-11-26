@@ -13,10 +13,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="style2.css" />
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
     <title>Aashir</title>
-
   </head>
   <body>
     <!-- Navigation -->
@@ -66,9 +65,16 @@
         <div class="about-info">
           <h1><span>About Me</span></h1>
           <p>
-            I’m a CS student at Muslim Youth University who loves building clean, good-looking, and fully responsive websites with HTML, CSS, and basic JavaScript (think smooth navigation, mobile menus, simple interactivity, nothing crazy with frameworks yet).
-My code is always organized, easy to read, and works perfectly on phones, tablets, and desktops. I’m super careful with details, test everything, and never miss a deadline.
-Right now I’m looking for freelance projects or junior roles where I can keep learning while delivering solid, client-ready websites. If you need someone reliable who gets things done right, let’s talk!
+            I’m a CS student at Muslim Youth University who loves building
+            clean, good-looking, and fully responsive websites with HTML, CSS,
+            and basic JavaScript (think smooth navigation, mobile menus, simple
+            interactivity, nothing crazy with frameworks yet). My code is always
+            organized, easy to read, and works perfectly on phones, tablets, and
+            desktops. I’m super careful with details, test everything, and never
+            miss a deadline. Right now I’m looking for freelance projects or
+            junior roles where I can keep learning while delivering solid,
+            client-ready websites. If you need someone reliable who gets things
+            done right, let’s talk!
           </p>
         </div>
 
@@ -96,8 +102,6 @@ Right now I’m looking for freelance projects or junior roles where I can keep 
           </ul>
         </div>
       </div>
-
-      
     </section>
 
     <!-- Services Section -->
@@ -110,8 +114,9 @@ Right now I’m looking for freelance projects or junior roles where I can keep 
           <h1><span>Web Development</span></h1>
 
           <p>
-            I build clean, fast, responsive websites from scratch using HTML, CSS, and JavaScript.
-            Solid code that looks great and works perfectly on every device—portfolios, landing pages, small business sites.
+            I build clean, fast, responsive websites from scratch using HTML,
+            CSS, and JavaScript. Solid code that looks great and works perfectly
+            on every device—portfolios, landing pages, small business sites.
           </p>
         </div>
 
@@ -119,97 +124,150 @@ Right now I’m looking for freelance projects or junior roles where I can keep 
           <h1><span>Web Design</span></h1>
 
           <p>
-            Clean, modern web design that looks stunning on every device. Fresh layouts, perfect colors, and pixel-perfect details. Ready to make your site stand out?
+            Clean, modern web design that looks stunning on every device. Fresh
+            layouts, perfect colors, and pixel-perfect details. Ready to make
+            your site stand out?
           </p>
         </div>
       </div>
     </section>
 
     <!-- Contact section -->
-<section id="contact">
-  <h1 class="header"><span>Contact</span></h1>
+    <section id="contact">
+      <h1 class="header"><span>Contact</span></h1>
 
-  <form 
-    name="contact" 
-    id="contactForm" 
-    method="POST" 
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
-  >
-    <input type="hidden" name="form-name" value="contact" />
-    <p hidden>
-      <label>Don't fill this out: <input name="bot-field" /></label>
-    </p>
+      <form
+        name="contact"
+        id="contactForm"
+        method="POST"
+        netlify
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label>Don’t fill: <input name="bot-field" /></label>
+        </p>
 
-    <div class="input-box">
-      <span>Full Name</span>
-      <input type="text" name="name" id="name" placeholder="Enter Your Full Name" required>
-    </div>
+        <div class="input-box">
+          <span>Full Name</span>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter Your Full Name"
+            required
+          />
+        </div>
 
-    <div class="input-box">
-      <span>Email</span>
-      <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
-    </div>
+        <div class="input-box">
+          <span>Email</span>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Your Email"
+            required
+          />
+        </div>
 
-    <div class="input-box message-box">
-      <span>Your Message</span>
-      <div class="message-wrapper">
-        <input type="text" name="message-placeholder" id="message-input" placeholder="Enter Your Message" required>
-        <textarea name="message" id="message-textarea" placeholder="Enter Your Message" rows="5"></textarea>
-      </div>
-    </div>
+        <div class="input-box message-box">
+          <span>Your Message</span>
+          <div class="message-wrapper">
+            <input
+              type="text"
+              name="message-placeholder"
+              id="message-input"
+              placeholder="Enter Your Message"
+            />
+            <textarea
+              name="message"
+              id="message-textarea"
+              placeholder="Enter Your Message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+        </div>
 
-    <div id="form-status" style="text-align: center; margin: 1rem 0; color: white;"></div>
+        <div
+          id="form-status"
+          style="
+            text-align: center;
+            margin: 1rem 0;
+            min-height: 30px;
+            color: white;
+          "
+        ></div>
 
-    <button type="submit" class="contact-btn">Submit</button>
-  </form>
-</section>
-
+        <button type="submit" class="contact-btn">Submit</button>
+      </form>
+    </section>
 
     <!-- Footer Section -->
 
     <footer>
-        <div class="col-left">
-            <div class="col-box">
-                <span><i class="bi bi-geo-alt-fill"></i></span>
-                <span>Islamabad</span>
-            </div>
-
-            <div class="col-box">
-                <span><i class="bi bi-telephone-fill"></i></span>
-                <span>+92 3275394667</span>
-            </div>
-
-            <div class="col-box">
-                <span><i class="bi bi-envelope-fill"></i></span>
-                <span>m.aashiradnan@gmail.com</span>
-            </div>
-
+      <div class="col-left">
+        <div class="col-box">
+          <span><i class="bi bi-geo-alt-fill"></i></span>
+          <span>Islamabad</span>
         </div>
 
-        <div class="col-right">
-            <span>About my Socials</span>
-            <p>Available for freelance and part-time web projects.
-Need a clean, responsive site or help with HTML, CSS, or JavaScript? Drop me a message, I’m ready to jump in and get it done right.</p>
-
-            <div class="social-icons">
-                <span>
-                    <a target="_blank" href="https://github.com/AashirAdnan"><i class="bi bi-github"></i></a>
-                </span>
-                <span>
-                   <a target="_blank" href="https://www.linkedin.com/in/aashir-adnan/"><i class="bi bi-linkedin"></i></a>
-                </span>
-                <span>
-                    <a target="_blank" href="https://www.instagram.com/_4ashir/?hl=en"><i class="bi bi-instagram"></i></a>
-                </span>
-                <span>
-                    <a target="_blank" href="https://www.facebook.com/aashir.adnan.752/"><i class="bi bi-facebook"></i></a>
-                </span>
-            </div>
-
+        <div class="col-box">
+          <span><i class="bi bi-telephone-fill"></i></span>
+          <span>+92 3275394667</span>
         </div>
+
+        <div class="col-box">
+          <span><i class="bi bi-envelope-fill"></i></span>
+          <span>m.aashiradnan@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="col-right">
+        <span>About my Socials</span>
+        <p>
+          Available for freelance and part-time web projects. Need a clean,
+          responsive site or help with HTML, CSS, or JavaScript? Drop me a
+          message, I’m ready to jump in and get it done right.
+        </p>
+
+        <div class="social-icons">
+          <span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/AashirAdnan"
+              ><i class="bi bi-github"></i
+            ></a>
+          </span>
+          <span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/aashir-adnan/"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </span>
+          <span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/_4ashir/?hl=en"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </span>
+          <span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/aashir.adnan.752/"
+              ><i class="bi bi-facebook"></i
+            ></a>
+          </span>
+        </div>
+      </div>
     </footer>
-    
+
     <script src="script.js"></script>
   </body>
 </html>
